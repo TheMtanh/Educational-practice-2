@@ -1,4 +1,4 @@
-def containsDuplicate(nums):
+def duplicates(nums):
     seen = set()
     for num in nums:
         if num in seen:
@@ -7,5 +7,5 @@ def containsDuplicate(nums):
     return False
 
 
-print(containsDuplicate([1, 2, 3, 4]))
-print(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
+print(duplicates([1, 2, 3, 4]))
+print(duplicates([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
