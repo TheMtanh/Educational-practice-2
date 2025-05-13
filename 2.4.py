@@ -20,7 +20,7 @@ def main():
         try:
             counter = Counter(int(start))
         except ValueError:
-            print("Ошибка ввода. Используется значение по умолчанию (0).")
+            print("Ошибка ввода. Используется значение по умолчанию (0)")
             counter = Counter()
 
     while True:
