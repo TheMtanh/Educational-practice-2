@@ -26,7 +26,7 @@ students = []
 
 def add_student():
     surname = input("Фамилия: ")
-    birth = input("Дата рождения (гггг-мм-дд): ")
+    birth = input("Дата рождения (дд.мм.гггг): ")
     group = input("Номер группы: ")
     grades = input("Введите 5 оценок через пробел: ").split()
     grades = list(map(int, grades))
