@@ -27,19 +27,19 @@ def main():
         cmd = input("Введите номер поезда для получения информации (или '0' для выхода): ")
 
         if cmd == "0":
-            print("Выход из программы.")
+            print("Выход из программы")
             break
 
         found = False
         for train in trains:
             if str(train.train_number) == cmd:
-                print("\nИнформация о поезде:")
+                print("\nИнформация о поезде: ")
                 train.info()
                 found = True
                 break
 
         if not found:
-            print("Поезд с таким номером не найден.")
+            print("Поезд с таким номером не найден")
 
 
 main()
