@@ -35,7 +35,7 @@ def add_drink():
     stock = int(input("Остаток: "))
     with sqlite3.connect("ilovedrink.db") as conn:
         conn.execute("INSERT INTO drinks (name, strength, stock) VALUES (?, ?, ?)", (name, strength, stock))
-        print("Напиток добавлен.")
+        print("Напиток добавлен")
 
 
 def view_drinks():
@@ -49,7 +49,7 @@ def add_ingredient():
     stock = int(input("Остаток: "))
     with sqlite3.connect("ilovedrink.db") as conn:
         conn.execute("INSERT INTO ingredients (name, stock) VALUES (?, ?)", (name, stock))
-        print("Ингредиент добавлен.")
+        print("Ингредиент добавлен")
 
 
 def view_ingredients():
@@ -73,7 +73,7 @@ def create_cocktail():
             amount = int(input("Количество: "))
             cur.execute("INSERT INTO cocktail_ingredients (cocktail_id, ingredient_id, amount) VALUES (?, ?, ?)",
                         (cocktail_id, ing_id, amount))
-        print("Коктейль создан.")
+        print("Коктейль создан")
 
 
 def sell_cocktail():
@@ -95,7 +95,7 @@ def restock():
         return
     with sqlite3.connect("ilovedrink.db") as conn:
         conn.execute(f"UPDATE {table} SET stock = stock + ? WHERE id = ?", (amount, id))
-        print("Запасы пополнены.")
+        print("Запасы пополнены")
 
 
 def menu():
