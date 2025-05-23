@@ -39,8 +39,8 @@ def list_students():
     if not students:
         print("Список пуст\n")
         return
-    for i, s in enumerate(students):
-        print(f"\nСтудент #{i + 1}")
+    for i, s in enumerate(students, start=1):
+        print(f"\nСтудент #{i}")
         s.show_info()
     print()
 
