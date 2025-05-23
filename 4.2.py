@@ -83,7 +83,7 @@ def sell_cocktail():
         ingredients = cur.execute("SELECT ingredient_id, amount FROM cocktail_ingredients WHERE cocktail_id=?", (id,)).fetchall()
         for ing_id, amt in ingredients:
             cur.execute("UPDATE ingredients SET stock = stock - ? WHERE id = ?", (amt, ing_id))
-        print("Продажа завершена.")
+        print("Продажа завершена")
 
 
 def restock():
