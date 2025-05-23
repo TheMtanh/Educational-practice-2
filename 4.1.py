@@ -10,8 +10,11 @@ def init_db():
 
 
 def add():
-    f = input("Имя: "); l = input("Фамилия: "); m = input("Отчество: ")
-    g = input("Группа: "); marks = list(map(int, input("4 оценки: ").split()))
+    f = input("Имя: ")
+    l = input("Фамилия: ")
+    m = input("Отчество: ")
+    g = input("Группа: ")
+    marks = list(map(int, input("4 оценки: ").split()))
     with sqlite3.connect("students.db") as conn:
         conn.execute("INSERT INTO students (first, last, middle, group_name, g1, g2, g3, g4) VALUES (?,?,?,?,?,?,?,?)",
                      (f, l, m, g, *marks))
@@ -37,8 +40,11 @@ def view_one():
 
 def edit():
     id = input("ID: ")
-    f = input("Имя: "); l = input("Фамилия: "); m = input("Отчество: ")
-    g = input("Группа: "); marks = list(map(int, input("4 оценки: ").split()))
+    f = input("Имя: ")
+    l = input("Фамилия: ")
+    m = input("Отчество: ")
+    g = input("Группа: ")
+    marks = list(map(int, input("4 оценки: ").split()))
     with sqlite3.connect("students.db") as conn:
         conn.execute("""
             UPDATE students SET first=?, last=?, middle=?, group_name=?,
